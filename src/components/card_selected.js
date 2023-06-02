@@ -9,7 +9,6 @@ import Description from './table';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 export default function CardResistorSelected({ resistor, handleAddToCart }) {
-  console.log('resistor55', resistor);
   return (
     <>
       <Card

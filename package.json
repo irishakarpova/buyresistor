@@ -1,7 +1,6 @@
 {
   "name": "radio-parts",
   "version": "0.1.0",
-  "homepage": "/",
   "private": true,
   "dependencies": {
     "@chec/commerce.js": "^2.8.0",

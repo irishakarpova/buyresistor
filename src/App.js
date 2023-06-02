@@ -17,6 +17,7 @@ import ElCapacitors from './components/el_capacitors';
 import { Checkout } from './components/checkout/checkoutform';
 import { Categories } from './components/categories';
 import { Typography } from '@mui/material';
+import { Test } from './components/test';
 
 function App() {
   const [categories, setCategories] = useState([]);
@@ -97,22 +98,22 @@ function App() {
               />
             }
           ></Route>
+          <Route
+            exact
+            path="/test"
+            element={
+              <Test />
+              // <Capacitors
+              //   cart={cart}
+              //   handleAddToCart={handleAddToCart}
+              //   categories={categories}
+              // />
+            }
+          ></Route>
 
           <Route
             exact
-            path="/"
-            element={
-              <Categories
-                cart={cart}
-                handleAddToCart={handleAddToCart}
-                categories={categories}
-                loading={loading}
-              />
-            }
-          ></Route>
-          <Route
-            exact
-            path="/1-4w-metal-film-resistors-1-910k"
+            path="1-4w-metal-film-resistors-1-910k"
             element={
               <ResistorsK
                 cart={cart}
@@ -123,7 +124,7 @@ function App() {
           ></Route>
           <Route
             exact
-            path="/1-4w-metal-film-resistors-1-10m"
+            path="1-4w-metal-film-resistors-1-10m"
             element={
               <ResistorsM
                 cart={cart}
@@ -143,17 +144,7 @@ function App() {
               />
             }
           ></Route>
-          <Route
-            exact
-            path="ceramic-capacitors"
-            element={
-              <Capacitors
-                cart={cart}
-                handleAddToCart={handleAddToCart}
-                categories={categories}
-              />
-            }
-          ></Route>
+
           <Route
             exact
             path="1-8w-carbon-film-resistors"
@@ -226,6 +217,18 @@ function App() {
             exact
             path="/"
             element={<Categories categories={categories} />}
+          ></Route>
+          <Route
+            exact
+            path="/"
+            element={
+              <Categories
+                cart={cart}
+                handleAddToCart={handleAddToCart}
+                categories={categories}
+                loading={loading}
+              />
+            }
           ></Route>
         </Routes>
 
